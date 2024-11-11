@@ -5,5 +5,7 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.EventIO" parent="Base.Theme.EventIO" />
+    <style name="Theme.EventIO" parent="Base.Theme.EventIO">
+        <item name="android:fontFamily">@font/righteous</item>
+    </style>
 </resources>
