@@ -1,15 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_blue">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="209dp" />
+
+    <ScrollView
+        android:layout_width="405dp"
+        android:layout_height="728dp"
+        tools:layout_editor_absoluteX="6dp">
+        <!--app:layout_constraintTop_toBottomOf="@+id/register_firstname_input"
+        tools:layout_editor_absoluteX="0dp"-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/register_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="68dp"
+                android:text="REGISTER"
+                android:textColor="@color/orange"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.475"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="REGISTER" />
+
+            <TextView
+                android:id="@+id/register_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Email"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/register_header"
+                tools:text="Email" />
+
+
+            <EditText
+                android:id="@+id/register_email_input"
+                android:layout_width="348dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/input_background"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.47"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/register_email" />
+
+            <TextView
+                android:id="@+id/register_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Password"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/register_email_input"
+                tools:text="Password" />
+
+            <EditText
+                android:id="@+id/editTextTextPassword"
+                android:layout_width="348dp"
+                android:layout_height="37dp"
+                android:background="@drawable/input_background"
+                android:ems="10"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/register_password" />
+
+            <TextView
+                android:id="@+id/register_repeatpassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Repeat password"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.114"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+                tools:text="Repeat password" />
+
+            <EditText
+                android:id="@+id/register_repeatpassword_input"
+                android:layout_width="348dp"
+                android:layout_height="37dp"
+                android:background="@drawable/input_background"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/register_repeatpassword" />
+
+            <TextView
+                android:id="@+id/regiser_firstname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="First name"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.09"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/register_repeatpassword_input"
+                tools:text="First name" />
+
+            <EditText
+                android:id="@+id/register_firstname_input"
+                android:layout_width="348dp"
+                android:layout_height="37dp"
+                android:background="@drawable/input_background"
+                android:ems="10"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/regiser_firstname" />
+
+
+            <TextView
+                android:id="@+id/register_lastname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Last name"
+                android:textSize="16sp"
+                tools:text="Last name" />
+
+            <EditText
+                android:id="@+id/register_lastname_input"
+                android:layout_width="348dp"
+                android:layout_height="37dp"
+                android:background="@drawable/input_background"
+                android:ems="10"
+                android:inputType="text"
+                android:paddingLeft="10dp" />
+
+            <TextView
+                android:id="@+id/register_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Phone number"
+                android:textSize="16sp"
+                tools:text="Phone number" />
+
+            <EditText
+                android:id="@+id/register_phone_input"
+                android:layout_width="348dp"
+                android:layout_height="37dp"
+                android:background="@drawable/input_background"
+                android:ems="10"
+                android:inputType="phone"
+                android:paddingLeft="10dp" />
+
+            <TextView
+                android:id="@+id/register_Country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Country"
+                android:textSize="16sp"
+                tools:text="Country" />
+
+            <AutoCompleteTextView
+                android:id="@+id/country_auto_complete"
+                android:layout_width="348dp"
+                android:layout_height="37dp"
+                android:background="@drawable/input_background"
+                android:hint="Select Country"
+                android:paddingLeft="10dp" />
+
+            <TextView
+                android:id="@+id/register_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="City"
+                android:textSize="16sp"
+                tools:text="City" />
+
+            <EditText
+                android:id="@+id/register_city_input"
+                android:layout_width="348dp"
+                android:layout_height="37dp"
+                android:background="@drawable/input_background"
+                android:ems="10"
+                android:inputType="text"
+                android:paddingLeft="10dp" />
+
+            <TextView
+                android:id="@+id/register_street"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Street"
+                android:textSize="16sp"
+                tools:text="Street" />
+
+            <EditText
+                android:id="@+id/register_street_input"
+                android:layout_width="348dp"
+                android:layout_height="37dp"
+                android:background="@drawable/input_background"
+                android:ems="10"
+                android:inputType="text"
+                android:paddingLeft="10dp" />
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
