@@ -13,15 +13,16 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="321dp"
-        android:layout_height="194dp"
+        android:layout_width="208dp"
+        android:layout_height="188dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="60dp"
         android:cropToPadding="true"
+        android:scaleType="centerCrop"
         android:src="@drawable/birthday_cake_with_lit_candles"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.966"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -41,17 +42,17 @@
         android:id="@+id/textView4"
         android:layout_width="44dp"
         android:layout_height="21dp"
-        android:layout_marginStart="68dp"
+        android:layout_marginStart="64dp"
         android:layout_marginTop="12dp"
-        android:textColor="@color/orange"
         android:text="Type: "
+        android:textColor="@color/orange"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="146dp"
-        android:layout_height="21dp"
+        android:layout_width="163dp"
+        android:layout_height="22dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="12dp"
         android:text="Wedding"
@@ -60,10 +61,10 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="201dp"
-        android:layout_height="41dp"
+        android:layout_width="209dp"
+        android:layout_height="39dp"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="@color/orange"
         android:text="View details"
         android:textColorLink="@color/orange"
