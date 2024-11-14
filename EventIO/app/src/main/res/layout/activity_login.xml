@@ -73,7 +73,6 @@
         android:backgroundTint="@color/orange"
         android:text="LOGIN"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_question"
         tools:text="LOGIN" />
