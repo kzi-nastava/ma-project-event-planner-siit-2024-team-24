@@ -17,7 +17,7 @@ public class HomePageActivity extends AppCompatActivity {
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragmentContainerCardView, new CardViewFragment())
+                    .replace(R.id.fragmentHomeBar, new HomePageBarFragment())
                     .commit();
         }
     }

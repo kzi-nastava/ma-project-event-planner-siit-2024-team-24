@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue_transparent"
+    tools:context=".ProductServiceFilerFragment">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search for product/service(P/S)"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/dark_blue"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/editTextInputName"
+        android:layout_width="378dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:hint="P/S Name"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white"
+        android:layout_height="48dp"/>
+
+    <EditText
+        android:id="@+id/editTextMaxPrice"
+        android:layout_width="115dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:background="@color/white"
+        android:hint="Max price"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="106dp"
+        android:layout_height="119dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="160dp"
+
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Labela iznad checkboxa -->
+        <TextView
+            android:id="@+id/labelType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Search for:"
+            android:textColor="@color/dark_blue"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:id="@+id/checkboxOption1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Products"
+            android:textColor="@color/dark_blue" />
+
+        <CheckBox
+            android:id="@+id/checkboxOption2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Services"
+            android:textColor="@color/dark_blue" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextInputCountry"
+        android:layout_width="185dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="288dp"
+        android:background="@color/white"
+        android:hint="Country"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextInputCity"
+        android:layout_width="173dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="288dp"
+        android:background="@color/white"
+        android:hint="City"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Date From Label + EditText + Button -->
+        <TextView
+            android:id="@+id/labelDateFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Reservation deadline(service):"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextReservationDate"
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:focusable="false"
+                android:hint="dd.mm.yyyy." />
+
+            <Button
+                android:id="@+id/buttonReservationDate"
+                android:layout_width="123dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/orange"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="Select date"
+                android:textSize="13sp"
+                app:cornerRadius="5dp" />
+        </LinearLayout>
+
+        <!-- Date To Label + EditText + Button -->
+        <TextView
+            android:id="@+id/labelDateTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:text="Duration(sevice):"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextMinDuration"
+                android:layout_width="115dp"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:focusable="false"
+                android:inputType="number"
+                android:hint="Min" />
+
+            <EditText
+                android:id="@+id/editTextMaxDuration"
+                android:layout_width="124dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="8dp"
+                android:background="@color/white"
+                android:inputType="number"
+                android:focusable="false"
+                android:hint="Max" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="381dp"
+        android:layout_height="158dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="344dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Labela iznad checkboxova -->
+        <TextView
+            android:id="@+id/labelSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Sort by:"
+            android:textColor="@color/dark_blue"
+            android:textSize="14sp" />
+
+        <!-- Prvi red sa 4 checkboxa -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <CheckBox
+                android:id="@+id/checkboxSortOption1"
+                android:layout_width="29dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Name"
+                android:textColor="@color/dark_blue"
+                android:textSize="11sp" />
+
+            <CheckBox
+                android:id="@+id/checkboxSortOption2"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Max price"
+                android:textColor="@color/dark_blue"
+                android:textSize="11sp" />
+
+            <CheckBox
+                android:id="@+id/checkboxSortOption3"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Duration"
+                android:textColor="@color/dark_blue"
+                android:textSize="11sp" />
+
+            <CheckBox
+                android:id="@+id/checkboxSortOption4"
+                android:layout_width="94dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Reservation Date"
+                android:textColor="@color/dark_blue"
+
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/labelSortType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
+            android:text="Order by:"
+            android:textColor="@color/dark_blue"
+            android:textSize="14sp" />
+        <!-- Drugi red sa 2 checkboxa -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <CheckBox
+                android:id="@+id/checkboxOption5"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ASC"
+                android:textColor="@color/dark_blue" />
+
+
+            <CheckBox
+                android:id="@+id/checkboxOption6"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="DESC"
+                android:textColor="@color/dark_blue" />
+
+            <Button
+                android:id="@+id/buttonSearch"
+                android:layout_width="139dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/orange"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="Search"
+                android:textSize="16dp"
+                app:cornerRadius="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

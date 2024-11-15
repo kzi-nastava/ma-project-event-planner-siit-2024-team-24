@@ -9,8 +9,11 @@
 
 
     <FrameLayout
-        android:id="@+id/fragmentContainerCardView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:id="@+id/fragmentHomeBar"
+        android:layout_width="410dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="116dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
