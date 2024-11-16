@@ -16,33 +16,19 @@ import android.view.ViewGroup;
  */
 public class CardViewFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private static final String ARG_CARD_TYPE = "CARD_TYPE";
+    public static final String CARD_TYPE_EVENT = "EVENT";
+    public static final String CARD_TYPE_SERVICE = "SERVICE";
+    private String cardType;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     public CardViewFragment() {
         // Required empty public constructor
     }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment CardViewFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static CardViewFragment newInstance(String param1, String param2) {
+    public static CardViewFragment newInstance(String cardType) {
         CardViewFragment fragment = new CardViewFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putString(ARG_CARD_TYPE, cardType);
         fragment.setArguments(args);
         return fragment;
     }
@@ -51,8 +37,7 @@ public class CardViewFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            cardType = getArguments().getString(ARG_CARD_TYPE);
         }
     }
 
@@ -65,10 +50,29 @@ public class CardViewFragment extends Fragment {
         // Dodavanje podfragmenta u svaki kontejner
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
 
-        transaction.replace(R.id.fragmentContainer1, new EventCardFragment());
-        transaction.replace(R.id.fragmentContainer2, new EventCardFragment());
-        transaction.replace(R.id.fragmentContainer3, new EventCardFragment());
-        transaction.replace(R.id.fragmentContainer4, new EventCardFragment());
+        Fragment fragment1;
+        Fragment fragment2;
+        Fragment fragment3;
+        Fragment fragment4;
+
+        if (CARD_TYPE_EVENT.equals(cardType)) {
+            fragment1 = new EventCardFragment();
+            fragment2 = new EventCardFragment();
+            fragment3 = new EventCardFragment();
+            fragment4 = new EventCardFragment();
+        } else if (CARD_TYPE_SERVICE.equals(cardType)) {
+            fragment1 = new ServiceProductCardFragment();
+            fragment2 = new ServiceProductCardFragment();
+            fragment3 = new ServiceProductCardFragment();
+            fragment4 = new ServiceProductCardFragment();
+        } else {
+            throw new IllegalArgumentException("Unknown card type: " + cardType);
+        }
+
+        transaction.replace(R.id.fragmentContainer1, fragment1);
+        transaction.replace(R.id.fragmentContainer2, fragment2);
+        transaction.replace(R.id.fragmentContainer3, fragment3);
+        transaction.replace(R.id.fragmentContainer4, fragment4);
 
         transaction.commit();
 

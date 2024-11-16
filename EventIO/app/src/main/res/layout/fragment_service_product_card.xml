@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="179dp"
     android:layout_height="254dp"
     android:background="@drawable/rounded_frame"
-    tools:context=".EventCardFragment">
-
-
-    <!-- TODO: Update blank fragment layout -->
-
+    tools:context=".ServiceProductCardFragment">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -19,7 +15,7 @@
         android:layout_marginTop="4dp"
         android:cropToPadding="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/fw9b3170"
+        android:src="@drawable/birthday_cake_with_lit_candles"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -40,7 +36,7 @@
         android:layout_height="20dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="6dp"
-        android:text="Type: "
+        android:text="Price: "
         android:textColor="@color/orange"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
@@ -51,7 +47,7 @@
         android:layout_height="20dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="6dp"
-        android:text="Wedding"
+        android:text="500,00$"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
