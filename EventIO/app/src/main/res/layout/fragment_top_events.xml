@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TopEventsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+    <FrameLayout
+        android:layout_width="410dp"
+        android:layout_height="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="410dp"
+            android:layout_height="195dp"
+            android:padding="10dp"
+            android:layout_marginBottom="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/celebration_setting_lively_decorations_make_for_a_spirited_birthday_party_background_ai_generated_photo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="13dp"
+            android:background="@color/dark_blue_transparent"
+            android:text="Event name"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="289dp"
+            android:layout_height="81dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="40dp"
+            android:background="@color/dark_blue_transparent"
+            android:text="Desciption of the event Desciption of the event is here Desciption of the event is here. Desciption of the event is here. Desciption of the event is here. Here you can see description of the event Here you can see description of the event Here you can see description of the event"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/imageView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="117dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="122dp"
+            android:background="@color/dark_blue_transparent"
+            android:text="Type: Wedding"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/imageView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
