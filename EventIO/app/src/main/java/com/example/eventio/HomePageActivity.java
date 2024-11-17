@@ -1,9 +1,14 @@
 package com.example.eventio;
 import android.util.Log;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
 import androidx.fragment.app.Fragment;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 public class HomePageActivity extends AppCompatActivity {
 
@@ -37,6 +42,30 @@ public class HomePageActivity extends AppCompatActivity {
         loadFragment(R.id.frame3aps, CardViewFragment.newInstance(CardViewFragment.CARD_TYPE_SERVICE));
         loadFragment(R.id.frame4aps, CardViewFragment.newInstance(CardViewFragment.CARD_TYPE_SERVICE));
         loadFragment(R.id.frame5aps, CardViewFragment.newInstance(CardViewFragment.CARD_TYPE_SERVICE));
+
+
+        Button btnOpenSearchEvent = findViewById(R.id.buttonSearchEvents);
+        btnOpenSearchEvent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                EventFilterFragment dialogFragment = new EventFilterFragment();
+                dialogFragment.show(getSupportFragmentManager(), "EventFilterFragment");
+
+            }
+        });
+
+        Button btnOpenSearchProductsServices = findViewById(R.id.buttonSearchProductsServices);
+        btnOpenSearchProductsServices.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ProductServiceFilerFragment dialogFragment = new ProductServiceFilerFragment();
+                dialogFragment.show(getSupportFragmentManager(), "ProductServiceFilerFragment");
+
+            }
+        });
+
 
 
     }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_blue_transparent"
+    android:background="@color/light_blue"
     tools:context=".ProductServiceFilerFragment">
 
     <TextView
@@ -141,6 +141,7 @@
                 android:layout_height="48dp"
                 android:layout_marginStart="8dp"
                 android:backgroundTint="@color/orange"
+                android:textColor="@color/white"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
                 android:text="Select date"
@@ -290,6 +291,7 @@
                 android:backgroundTint="@color/orange"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
+                android:textColor="@color/white"
                 android:text="Search"
                 android:textSize="16dp"
                 app:cornerRadius="5dp"

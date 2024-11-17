@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_blue_transparent"
+    android:background="@color/light_blue"
     tools:context=".EventFilterFragment">
 
     <TextView
@@ -94,14 +94,16 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:text="Public"
-            android:textColor="@color/dark_blue" />
+            android:textColor="@color/dark_blue"
+            android:textColorLink="@color/dark_blue" />
 
         <CheckBox
             android:id="@+id/checkboxOption2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Private"
-            android:textColor="@color/dark_blue" />
+            android:textColor="@color/dark_blue"
+            android:textColorLink="@color/dark_blue" />
     </LinearLayout>
 
     <LinearLayout
@@ -146,6 +148,7 @@
                 android:insetBottom="0dp"
                 android:text="Select date"
                 android:textSize="13sp"
+                android:textColor="@color/white"
                 app:cornerRadius="5dp" />
         </LinearLayout>
 
@@ -183,6 +186,7 @@
                 android:insetBottom="0dp"
                 android:text="Select date"
                 android:textSize="13sp"
+                android:textColor="@color/white"
                 app:cornerRadius="5dp" />
         </LinearLayout>
     </LinearLayout>
@@ -221,6 +225,7 @@
                 android:layout_weight="1"
                 android:text="Name"
                 android:textColor="@color/dark_blue"
+                android:textColorLink="@color/dark_blue"
                 android:textSize="11sp" />
 
             <CheckBox
@@ -230,6 +235,7 @@
                 android:layout_weight="1"
                 android:text="Max guests"
                 android:textColor="@color/dark_blue"
+                android:textColorLink="@color/dark_blue"
                 android:textSize="11sp" />
 
             <CheckBox
@@ -239,6 +245,7 @@
                 android:layout_weight="1"
                 android:text="Date from"
                 android:textColor="@color/dark_blue"
+                android:textColorLink="@color/dark_blue"
                 android:textSize="11sp" />
 
             <CheckBox
@@ -248,6 +255,7 @@
                 android:layout_weight="1"
                 android:text="Date to"
                 android:textColor="@color/dark_blue"
+                android:textColorLink="@color/dark_blue"
                 android:textSize="11sp" />
         </LinearLayout>
 
@@ -273,7 +281,8 @@
                 android:layout_height="48dp"
                 android:layout_weight="1"
                 android:text="ASC"
-                android:textColor="@color/dark_blue" />
+                android:textColor="@color/dark_blue"
+                android:textColorLink="@color/dark_blue" />
 
 
             <CheckBox
@@ -287,12 +296,13 @@
             <Button
                 android:id="@+id/buttonSearch"
                 android:layout_width="139dp"
-                android:layout_height="match_parent"
+                android:layout_height="48dp"
                 android:backgroundTint="@color/orange"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
                 android:text="Search"
                 android:textSize="16dp"
+                android:textColor="@color/white"
                 app:cornerRadius="5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

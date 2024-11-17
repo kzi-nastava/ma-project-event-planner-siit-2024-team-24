@@ -2,18 +2,25 @@ package com.example.eventio;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link EventFilterFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class EventFilterFragment extends Fragment {
+public class EventFilterFragment extends BottomSheetDialogFragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -55,10 +62,27 @@ public class EventFilterFragment extends Fragment {
         }
     }
 
+    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public View onCreateView(@NonNull LayoutInflater inflater,@Nullable ViewGroup container,
+            @Nullable Bundle savedInstanceState) {
+
         return inflater.inflate(R.layout.fragment_event_filter, container, false);
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+
+        if (getDialog() != null) {
+            View bottomSheet = getDialog().findViewById(com.google.android.material.R.id.design_bottom_sheet);
+            if (bottomSheet != null) {
+                BottomSheetBehavior<View> behavior = BottomSheetBehavior.from(bottomSheet);
+                behavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+            }
+        }
+    }
+
+
 }
