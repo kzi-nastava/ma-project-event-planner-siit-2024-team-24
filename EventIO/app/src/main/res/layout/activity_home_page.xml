@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePageFragment">
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:paddingStart="135dp"
+                    android:paddingTop="8dp"
+                    android:text="Top Events"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="25dp" />
+
+
+                <FrameLayout
+                    android:id="@+id/fragmentHomeTopEvents"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:id="@+id/frame1"
+                                android:layout_width="410dp"
+                                android:layout_height="match_parent" />
+
+                            <!-- FrameLayout 2 -->
+                            <FrameLayout
+                                android:id="@+id/frame2"
+                                android:layout_width="410dp"
+                                android:layout_height="match_parent" />
+
+                            <!-- FrameLayout 3 -->
+                            <FrameLayout
+                                android:id="@+id/frame3"
+                                android:layout_width="410dp"
+                                android:layout_height="match_parent" />
+
+                            <!-- FrameLayout 4 -->
+                            <FrameLayout
+                                android:id="@+id/frame4"
+                                android:layout_width="410dp"
+                                android:layout_height="match_parent" />
+
+                            <!-- FrameLayout 5 -->
+                            <FrameLayout
+                                android:id="@+id/frame5"
+                                android:layout_width="410dp"
+                                android:layout_height="match_parent" />
+
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:paddingStart="65dp"
+                    android:paddingTop="8dp"
+                    android:text="Top Products/Services"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="25dp" />
+
+
+                <FrameLayout
+                    android:id="@+id/fragmentHomeTopProductsServices"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:id="@+id/frame1ps"
+                                android:layout_width="410dp"
+                                android:layout_height="match_parent" />
+
+                            <!-- FrameLayout 2 -->
+                            <FrameLayout
+                                android:id="@+id/frame2ps"
+                                android:layout_width="410dp"
+                                android:layout_height="match_parent" />
+
+                            <!-- FrameLayout 3 -->
+                            <FrameLayout
+                                android:id="@+id/frame3ps"
+                                android:layout_width="410dp"
+                                android:layout_height="match_parent" />
+
+                            <!-- FrameLayout 4 -->
+                            <FrameLayout
+                                android:id="@+id/frame4ps"
+                                android:layout_width="410dp"
+                                android:layout_height="match_parent" />
+
+                            <!-- FrameLayout 5 -->
+                            <FrameLayout
+                                android:id="@+id/frame5ps"
+                                android:layout_width="410dp"
+                                android:layout_height="match_parent" />
+
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </FrameLayout>
+
+                <Button
+                    android:id="@+id/buttonSearchEvents"
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="35dp"
+                    android:backgroundTint="@color/dark_blue"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="Search And Filter Event"
+                    android:textSize="18dp"
+                    app:cornerRadius="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <FrameLayout
+                    android:id="@+id/fragmentHomeAllEvent"
+                    android:layout_width="match_parent"
+                    android:layout_height="560dp"
+                    android:layout_marginTop="1dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+
+                            <FrameLayout
+                                android:id="@+id/frame1ae"
+                                android:layout_width="410dp"
+                                android:layout_height="match_parent" />
+
+                            <FrameLayout
+                                android:id="@+id/frame2ae"
+                                android:layout_width="410dp"
+                                android:layout_height="match_parent" />
+
+                            <!-- FrameLayout 3 -->
+                            <FrameLayout
+                                android:id="@+id/frame3ae"
+                                android:layout_width="410dp"
+                                android:layout_height="match_parent" />
+
+                            <!-- FrameLayout 4 -->
+                            <FrameLayout
+                                android:id="@+id/frame4ae"
+                                android:layout_width="410dp"
+                                android:layout_height="match_parent" />
+
+                            <!-- FrameLayout 5 -->
+                            <FrameLayout
+                                android:id="@+id/frame5ae"
+                                android:layout_width="410dp"
+                                android:layout_height="match_parent" />
+
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </FrameLayout>
+
+
+                <Button
+                    android:id="@+id/buttonSearchProductsServices"
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="35dp"
+                    android:backgroundTint="@color/dark_blue"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="Search And Filter Products/Services"
+                    android:textSize="18dp"
+                    app:cornerRadius="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <FrameLayout
+                    android:id="@+id/fragmentHomeAllProductsServices"
+                    android:layout_width="match_parent"
+                    android:layout_height="560dp"
+                    android:layout_marginTop="1dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+
+                            <FrameLayout
+                                android:id="@+id/frame1aps"
+                                android:layout_width="410dp"
+                                android:layout_height="match_parent" />
+
+                            <FrameLayout
+                                android:id="@+id/frame2aps"
+                                android:layout_width="410dp"
+                                android:layout_height="match_parent" />
+
+                            <!-- FrameLayout 3 -->
+                            <FrameLayout
+                                android:id="@+id/frame3aps"
+                                android:layout_width="410dp"
+                                android:layout_height="match_parent" />
+
+                            <!-- FrameLayout 4 -->
+                            <FrameLayout
+                                android:id="@+id/frame4aps"
+                                android:layout_width="410dp"
+                                android:layout_height="match_parent" />
+
+                            <!-- FrameLayout 5 -->
+                            <FrameLayout
+                                android:id="@+id/frame5aps"
+                                android:layout_width="410dp"
+                                android:layout_height="match_parent" />
+
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </FrameLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
